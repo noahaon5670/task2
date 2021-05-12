@@ -49,6 +49,9 @@ html {
 .header-nav-item {
   display: block;
 }
+.header-nav-item.current {
+  color: #f79314;
+}
 .header-nav-item > span {
   display: block;
   font-weight: bold;
@@ -84,6 +87,13 @@ html {
 .link-button.menu {
   height: 40px;
   font-size: 12px;
+}
+
+.hover-opacity {
+  transition: opacity 0.2s;
+}
+.hover-opacity:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */
