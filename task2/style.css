@@ -1,0 +1,89 @@
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+.content-width {
+  max-width: 1140px;
+  padding: 0 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contents-tidy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header {
+  padding: 20px 0;
+}
+
+.header-logo-pc {
+  width: auto;
+  height: 20px;
+}
+
+.header-nav-list > li + li {
+  margin-left: 30px;
+}
+.header-nav-list > li + li:last-child {
+  margin-left: 20px;
+}
+.header-nav-list.contents-tidy {
+  align-items: center;
+}
+.header-nav-item {
+  display: block;
+}
+.header-nav-item > span {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+.header-nav-item > span:first-child {
+  font-family: "Lato", sans-serif;
+}
+.header-nav-item > span:last-child {
+  font-size: 10px;
+}
+
+.header-button {
+  width: 150px;
+}
+
+.link-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-color: #f79314;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+}
+.link-button.menu {
+  height: 40px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
