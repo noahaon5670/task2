@@ -1,0 +1,437 @@
+// reset
+a{
+  color: #222;
+  text-decoration: none;
+}
+
+img{
+  border: 0;
+  vertical-align: middle;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+// variable
+$org-white: #fff;
+$org-orange: #f79314;
+
+
+html{
+  font-size: 14px;
+}
+
+img{
+  width: 100%;
+}
+
+.content-width{
+  max-width: 1140px;
+  padding: 0 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contents-tidy{
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header{
+  padding: 20px 0;
+}
+
+.header-logo{
+  &-pc{
+    width: auto;
+    height: 20px;
+  }
+}
+
+.header-nav{
+  &-list{
+    & > li + li{
+      margin-left: 30px;
+      
+      &:last-child{
+        margin-left: 20px;
+      }
+    }
+    
+    &.contents-tidy{
+      align-items: center;
+    }
+  }
+  
+  &-item{
+    display: block;
+    
+    &.current {
+      color: $org-orange;
+    }
+    
+    & > span{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      
+      &:first-child{
+        font-family: "Lato", sans-serif;
+      }
+      &:last-child{
+        font-size: 10px;
+      }
+    }
+    
+  }
+}
+
+.header-button{
+  width: 150px;
+}
+
+// link-button
+.link-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $org-white;
+  background-color: $org-orange;
+  border-radius: 30px;
+  text-decoration:none;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  
+  &.menu{
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+// hover-opacity
+.hover-opacity{
+  transition: opacity 0.2s;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// site-footer
+.site-footer{
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: $org-orange;
+  
+  &-main{
+    .footer-nav{
+      order: 2;
+    }
+    
+    .footer-character{
+      order: 3;
+      align-self: flex-end;
+    }
+    
+    .footer-info{
+      order: 1;
+    }
+  }
+}
+
+.footer-nav{
+  & > li + li{
+    margin-top: 30px;
+  }
+  
+  &-item{
+    font-size: 16px;
+    font-weight: bold;
+    color: $org-white;
+    
+    &:link, &:visited{
+      color: $org-white;
+    }
+    
+    & > span {
+      font-weight: normal;
+      margin-left: 1em;
+    }
+  }
+}
+
+.footer-character{
+  & > img{
+    width: auto;
+    height: 70px;
+  }
+}
+
+.footer-info{
+  display: block;
+  color: $org-white;
+  
+  .footer-logo{
+    display: inline-block;
+    max-width: 280px;
+    
+    & > img{
+      width: 100%;
+      height: auto;
+    }
+    
+    & + .footer-company{
+      margin-top: 25px;
+    }
+  }
+  
+  .footer-company{
+    font-size: 16px;
+    font-weight: bold;
+    
+    & + .footer-address{
+      margin-top: 10px;
+    }
+  }
+  
+  .footer-address{
+    font-size: 16px;
+    font-weight: bold;
+    
+    & + .footer-social{
+      margin-top: 35px;
+    }
+  }
+  
+  .footer-social{
+    display: flex;
+    
+    & > li + li{
+      margin-left: 20px;
+    }
+    
+    &-item{
+      display: block;
+      max-width: 60px;
+      
+      & > img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// page-top
+.page-top-button{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -105px;
+  right: 50px;
+  border-radius: 50%;
+  background-color:  $org-white;
+  box-shadow: 0 12px 30px -15px;
+  transition: 0.2s;
+  
+  &.contents-tidy{
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.page-top-arrow{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-left: solid 3px $org-orange;
+  border-top: solid 3px $org-orange;
+  transform: rotate(45deg);
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// section-under-layer
+.section-underlayer-hero{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px;
+  background-color: $org-orange;
+  
+  &.course{
+    background-image: url(images/course-hero-pc.png);
+  }
+  
+  &-heading{
+    color: $org-white;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-left: 110px;
+    
+    &.course{
+      padding-left: 145px;
+    }
+  }
+}
+
+// main-section
+.main-section{
+  padding-top: 75px;
+  padding-bottom: 80px;
+  
+  &.course-detail{
+    background-color: #fcfaf5;
+  }
+  
+  .section-header{
+    & + .section-content{
+      margin-top: 60px;
+    }
+  }
+}
+
+// section-header
+.section-header{
+  width: 100%;
+  
+  h2 > span{
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+  }
+  
+  &.contents-tidy{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &.bottom-line{
+    &::after{
+      content: '';
+      display:block;
+      border-bottom: solid 6px $org-orange;
+      width: 50px;
+      margin-top: 20px;
+    }
+  }
+}
+
+// section-main-heading
+.section-main-heading{
+  font-size: 46px;
+  font-weight: bold
+}
+
+// detail
+.detail-text{
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  
+  &-emphasis{
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.detail-point {
+  margin-top: 100px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: $org-white;
+  
+  .list-no {
+    background-color: $org-white;
+  }
+  
+  &-title{
+    margin-top: -20px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.detail-cassette{
+  width: 31%;
+  margin-top: 40px;
+  
+  &-title{
+    padding: 4px;
+    border-radius: 15px;
+    color: $org-white;
+    background-color: #222;
+  }
+  
+  &-image{
+    margin-top: 16px;
+  }
+  
+  &-text{
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    &::before{
+      content:"";
+      display: inline-block;
+      width: 23px;
+      height: 20px;
+      margin-right: 10px;
+      background: url(images/icon-finger.png) no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+//under-decoration
+.under-decoration{
+  background: linear-gradient(transparent 70%, #fff79d 70%, #fff79d);
+  word-wrap: break-word;
+  
+  & > br{
+    display: none;
+  }
+}
+
+// list-no
+.list-no{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: $org-orange;
+  font-weight: bold;
+  font-size: 40px;
+  
+  &-image{
+    width: 40px;
+    margin-top: -8px;
+  }
+}
+
+// pc
+.pc-br{
+  display: block;
+}
+
+// sp
+.sp-br{
+  display: inline;
+}
