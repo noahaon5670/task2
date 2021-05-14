@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   color: #222;
   text-decoration: none;
@@ -98,6 +99,22 @@ img {
 }
 .hover-opacity:hover {
   opacity: 0.7;
+}
+
+.hover-scale {
+  transition: transform 0.2s;
+}
+
+a:hover .hover-scale {
+  transform: scale(1.1);
+}
+
+.hover-text-color {
+  transition: 0.2s;
+}
+
+a:hover .hover-text-color {
+  color: #f79314;
 }
 
 .site-footer {
@@ -242,6 +259,17 @@ img {
 .main-section .section-header + .section-content {
   margin-top: 60px;
 }
+.main-section.pick-up-contents {
+  padding-top: 40px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  padding-bottom: 120px;
+  position: relative;
+}
+.main-section.pick-up-contents > * {
+  position: relative;
+  z-index: 1;
+}
 
 .section-header {
   width: 100%;
@@ -314,7 +342,7 @@ img {
   font-size: 16px;
   font-weight: bold;
 }
-.detail-cassette-text::before {
+.detail-cassette-text:before {
   content: "";
   display: inline-block;
   width: 23px;
@@ -348,6 +376,131 @@ img {
 .list-no-image {
   width: 40px;
   margin-top: -8px;
+}
+
+.detail-course-block {
+  width: 48.5%;
+  border-collapse: separate;
+  border: 1px solid #7070701A;
+  border-radius: 10px;
+  opacity: 1;
+}
+.detail-course-block:first-child {
+  margin-right: 25px;
+}
+.detail-course-block-box {
+  margin-top: 60px;
+  padding: 0 40px;
+  display: flex;
+  text-align: center;
+}
+
+.detail-course-head {
+  background-color: #f79314;
+  font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+}
+.detail-course-head > span {
+  fon-size: 14px;
+}
+.detail-course-head > p {
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.detail-course-content {
+  padding: 18px;
+}
+.detail-course-content:nth-child(even) {
+  background-color: #fffdfa;
+}
+.detail-course-content:nth-child(odd) {
+  background-color: #fff8ea;
+}
+.detail-course-content span {
+  color: #f79314;
+  margin-left: 5px;
+}
+.detail-course-content-price {
+  font-size: 28px;
+  font-family: Lato-Black;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+.detail-course-content-price:before {
+  content: "￥";
+  font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
+}
+.detail-course-content-price:after {
+  content: "税込";
+  font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-left: 4px;
+}
+.detail-course-content-body {
+  font-family: Noto Sans CJK JP;
+  font-size: 16px;
+  color: #22222299;
+  line-height: 2em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.detail-course-term {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.detail-course-anchor > a {
+  color: #f79314;
+  font-weight: bold;
+}
+.detail-course-anchor > a:before {
+  content: "\203A";
+  transform: matrix(0, 1, -1, 0, 0, 0);
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.pick-up-contents-list {
+  margin: 0 -20px;
+}
+.pick-up-contents-list.contents-tidy {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.pick-up-contents-list > .pick-up-contents-cassette {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: calc(100% / 3);
+}
+
+.pick-up-contents-media-thumbnail {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: calc((190 / 320) * 100%);
+}
+.pick-up-contents-media-thumbnail > img {
+  width: 100%;
+  height: 145%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.pick-up-contents-media-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  line-height: 1.8;
 }
 
 .pc-br {
