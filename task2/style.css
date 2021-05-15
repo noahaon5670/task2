@@ -1,24 +1,25 @@
 @charset "UTF-8";
+html {
+  font-size: 14px;
+}
+
 a {
   color: #222;
   text-decoration: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
 img {
   border: 0;
   vertical-align: middle;
+  width: 100%;
 }
 
 ul, ol {
   list-style: none;
-}
-
-html {
-  font-size: 14px;
-}
-
-img {
-  width: 100%;
 }
 
 .content-width {
@@ -378,6 +379,23 @@ a:hover .hover-text-color {
   margin-top: -8px;
 }
 
+.list-content {
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.list-content:before {
+  content: "";
+  display: inline-block;
+  min-width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #f79314;
+}
+
 .detail-course-block {
   width: 48.5%;
   border-collapse: separate;
@@ -404,7 +422,7 @@ a:hover .hover-text-color {
   font-weight: bold;
 }
 .detail-course-head > span {
-  fon-size: 14px;
+  font-size: 14px;
 }
 .detail-course-head > p {
   font-size: 20px;
@@ -501,6 +519,163 @@ a:hover .hover-text-color {
   font-weight: bold;
   margin-top: 15px;
   line-height: 1.8;
+}
+
+.plan-box {
+  margin-top: 60px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fcfaf5;
+}
+
+.plan-head {
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: #f79314;
+  background: -webkit-linear-gradient(-40deg, #f79314, #f74e06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.plan-head br {
+  display: none;
+}
+
+.plan-sub-head {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+}
+
+.plan-cassettes {
+  margin-top: 40px;
+  padding: 16px 20px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.plan-cassettes-head {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+}
+.plan-cassettes-head:before {
+  content: "";
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-image: url(images/icon-point.png);
+  background-size: 100%;
+}
+.plan-cassettes-tool {
+  width: 49%;
+  float: left;
+}
+.plan-cassettes-tool:nth-child(odd) {
+  margin-right: 2%;
+}
+.plan-cassettes-tool-box {
+  padding: 13px 8px 18px;
+}
+.plan-cassettes-tool-label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.plan-cassettes-tool-body {
+  font-size: 16px;
+}
+.plan-cassettes-tools {
+  display: flex;
+  margin-top: 28px;
+  display: flow-root;
+}
+.plan-cassettes-skipping {
+  display: flow-root;
+  padding: 20px;
+}
+.plan-cassettes-skipping-left {
+  float: left;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  margin-right: 20px;
+}
+.plan-cassettes-skipping-right {
+  float: left;
+  display: contents;
+}
+.plan-cassettes-skipping-right > h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+}
+.plan-cassettes-skipping-right > h4 > br {
+  display: none;
+}
+.plan-cassettes-skipping-right > p {
+  font-size: 16px;
+}
+.plan-cassettes-skipping-right > p > span {
+  color: #f79314;
+}
+
+.desc-title {
+  align-items: center;
+  width: 142px;
+  margin-top: 20px;
+  padding: 4px 26px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  color: #f79314;
+  background-color: #fcfaf5;
+}
+.desc-title:before {
+  content: "";
+  display: inline-block;
+  margin-top: 2px;
+  margin-right: 6px;
+  background-size: 100%;
+}
+.desc-title.detail:before {
+  width: 17px;
+  height: 17px;
+  background-image: url(images/icon-pencil.png);
+}
+.desc-title.term:before {
+  width: 16px;
+  height: 18px;
+  margin-left: 2px;
+  background-image: url(images/icon-calender.png);
+}
+.desc-title.condition:before {
+  width: 17px;
+  height: 14px;
+  margin-left: 2px;
+  background-image: url(images/icon-condition.png);
+}
+.desc-title.fee:before {
+  width: 20px;
+  height: 20px;
+  background-image: url(images/icon-coin.png);
+}
+
+.desc-text {
+  margin-top: 20px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.desc-text + desc-title {
+  margin-top: 30px;
 }
 
 .pc-br {

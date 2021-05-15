@@ -1,12 +1,21 @@
-// reset
+// preset
+html{
+  font-size: 14px;
+}
+
 a{
   color: #222;
   text-decoration: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
 img{
   border: 0;
   vertical-align: middle;
+  width: 100%;
 }
 
 ul, ol{
@@ -16,15 +25,6 @@ ul, ol{
 // variable
 $org-white: #fff;
 $org-orange: #f79314;
-
-
-html{
-  font-size: 14px;
-}
-
-img{
-  width: 100%;
-}
 
 .content-width{
   max-width: 1140px;
@@ -457,6 +457,25 @@ a:hover .hover-text-color{
   }
 }
 
+// list-content
+.list-content{
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 16px;
+  line-height: 26px;
+  
+  &:before {
+    content: "";
+    display: inline-block;
+    min-width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: $org-orange;
+  }
+}
+
 // detail-course
 .detail-course-block{
   width: 48.5%;
@@ -486,7 +505,7 @@ a:hover .hover-text-color{
   font-weight: bold;
   
   & > span{
-    fon-size: 14px;
+    font-size: 14px;
   }
   
   & > p{
@@ -601,6 +620,188 @@ a:hover .hover-text-color{
     font-weight: bold;
     margin-top: 15px;
     line-height: 1.8;
+  }
+}
+
+// plan
+.plan-box {
+  margin-top: 60px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fcfaf5;
+}
+
+.plan-head{
+  // max-width: 476px;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: $org-orange;
+  background: -webkit-linear-gradient(-40deg, $org-orange, #f74e06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  br{
+    display: none;
+  }
+}
+
+.plan-sub-head {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+}
+
+.plan-cassettes{
+  margin-top: 40px;
+  padding: 16px 20px 20px;
+  border-radius: 10px;
+  background-color: $org-white;
+  
+  &-head{
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    
+    &:before {
+      content: "";
+      position: relative;
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      background-image: url(images/icon-point.png);
+      background-size: 100%;
+    }
+  }
+  
+  &-tool{
+    width: 49%;
+    float: left;
+    
+    &:nth-child(odd){
+      margin-right: 2%;
+    }
+  }
+  
+  &-tool-box{
+    padding: 13px 8px 18px;
+  }
+  
+  &-tool-label{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  
+  &-tool-body {
+    font-size: 16px;
+  }
+  
+  &-tools{
+    display: flex;
+    margin-top: 28px;
+    display: flow-root;
+  }
+  
+  &-skipping{
+   display: flow-root;
+   padding: 20px;
+   
+   &-left {
+     float: left;
+     width: 90px;
+     height: 90px;
+     text-align: center;
+     margin-right: 20px;
+   }
+   
+   &-right {
+     float: left;
+     display: contents;
+     
+     & > h4{
+       margin-bottom: 8px;
+       font-size: 20px;
+       font-weight: bold;
+       line-height: 26px;
+       
+       & > br {
+         display: none;
+       }
+     }
+     
+     & > p{
+       font-size: 16px;
+       
+       & > span {
+         color: $org-orange;
+       }
+     }
+   }
+  }
+}
+
+// desc-title
+.desc-title{
+  align-items :center;
+  width: 142px;
+  margin-top: 20px;
+  padding: 4px 26px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  color: $org-orange;
+  background-color: #fcfaf5;
+  
+  &:before {
+    content: "";
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 6px;
+    background-size: 100%;
+  }
+  
+  &.detail:before{
+    width: 17px;
+    height: 17px;
+    background-image: url(images/icon-pencil.png);
+  }
+  
+  &.term:before{
+    width: 16px;
+    height: 18px;
+    margin-left: 2px;
+    background-image: url(images/icon-calender.png);
+  }
+  
+  &.condition:before {
+    width: 17px;
+    height: 14px;
+    margin-left: 2px;
+    background-image: url(images/icon-condition.png);
+  }
+  
+  &.fee:before {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/icon-coin.png);
+  }
+}
+
+.desc-text{
+  margin-top: 20px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 18px;
+  
+  & + desc-title{
+    margin-top: 30px;
   }
 }
 
