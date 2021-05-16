@@ -47,9 +47,17 @@ $org-orange: #f79314;
     width: auto;
     height: 20px;
   }
+  
+  &-sp{
+    display: none;
+  }
 }
 
 .header-nav{
+  &-hamburger{
+    display: none;
+  }
+  
   &-list{
     & > li + li{
       margin-left: 30px;
@@ -160,6 +168,10 @@ a:hover .hover-text-color{
     .footer-info{
       order: 1;
     }
+    
+    & + .site-footer-sub {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -246,6 +258,11 @@ a:hover .hover-text-color{
   }
 }
 
+.footer-copyright{
+  color: $org-white;
+  fonttt-size: 12px;
+}
+
 // page-top
 .page-top-button{
   position: absolute;
@@ -287,7 +304,7 @@ a:hover .hover-text-color{
   background-color: $org-orange;
   
   &.course{
-    background-image: url(images/course-hero-pc.png);
+    background-image: url(../images/course-hero-pc.png);
   }
   
   &-heading{
@@ -421,7 +438,7 @@ a:hover .hover-text-color{
       width: 23px;
       height: 20px;
       margin-right: 10px;
-      background: url(images/icon-finger.png) no-repeat;
+      background: url(../images/icon-finger.png) no-repeat;
       background-size: 100%;
     }
   }
@@ -500,7 +517,7 @@ a:hover .hover-text-color{
   background-color: $org-orange;
   font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
   color: white;
-  padding: 10px;
+  padding: 18px;
   border-radius: 10px 10px 0 0;
   font-weight: bold;
   
@@ -563,6 +580,11 @@ a:hover .hover-text-color{
   font-size: 16px;
   font-weight: bold;
   padding: 8px;
+  
+  &:first-letter{
+    font-family: Lato-Black;
+    font-size: 30px;
+  }
 }
 
 .detail-course-anchor{
@@ -675,7 +697,7 @@ a:hover .hover-text-color{
       width: 20px;
       height: 20px;
       margin-right: 8px;
-      background-image: url(images/icon-point.png);
+      background-image: url(../images/icon-point.png);
       background-size: 100%;
     }
   }
@@ -770,27 +792,27 @@ a:hover .hover-text-color{
   &.detail:before{
     width: 17px;
     height: 17px;
-    background-image: url(images/icon-pencil.png);
+    background-image: url(../images/icon-pencil.png);
   }
   
   &.term:before{
     width: 16px;
     height: 18px;
     margin-left: 2px;
-    background-image: url(images/icon-calender.png);
+    background-image: url(../images/icon-calender.png);
   }
   
   &.condition:before {
     width: 17px;
     height: 14px;
     margin-left: 2px;
-    background-image: url(images/icon-condition.png);
+    background-image: url(../images/icon-condition.png);
   }
   
   &.fee:before {
     width: 20px;
     height: 20px;
-    background-image: url(images/icon-coin.png);
+    background-image: url(../images/icon-coin.png);
   }
 }
 

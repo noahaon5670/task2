@@ -42,7 +42,13 @@ ul, ol {
   width: auto;
   height: 20px;
 }
+.header-logo-sp {
+  display: none;
+}
 
+.header-nav-hamburger {
+  display: none;
+}
 .header-nav-list > li + li {
   margin-left: 30px;
 }
@@ -133,6 +139,9 @@ a:hover .hover-text-color {
 .site-footer-main .footer-info {
   order: 1;
 }
+.site-footer-main + .site-footer-sub {
+  margin-top: 60px;
+}
 
 .footer-nav > li + li {
   margin-top: 30px;
@@ -199,6 +208,11 @@ a:hover .hover-text-color {
   height: auto;
 }
 
+.footer-copyright {
+  color: #fff;
+  fonttt-size: 12px;
+}
+
 .page-top-button {
   position: absolute;
   width: 50px;
@@ -237,7 +251,7 @@ a:hover .hover-text-color {
   background-color: #f79314;
 }
 .section-underlayer-hero.course {
-  background-image: url(images/course-hero-pc.png);
+  background-image: url(../images/course-hero-pc.png);
 }
 .section-underlayer-hero-heading {
   color: #fff;
@@ -349,7 +363,7 @@ a:hover .hover-text-color {
   width: 23px;
   height: 20px;
   margin-right: 10px;
-  background: url(images/icon-finger.png) no-repeat;
+  background: url(../images/icon-finger.png) no-repeat;
   background-size: 100%;
 }
 
@@ -417,7 +431,7 @@ a:hover .hover-text-color {
   background-color: #f79314;
   font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
   color: white;
-  padding: 10px;
+  padding: 18px;
   border-radius: 10px 10px 0 0;
   font-weight: bold;
 }
@@ -471,6 +485,10 @@ a:hover .hover-text-color {
   font-size: 16px;
   font-weight: bold;
   padding: 8px;
+}
+.detail-course-term:first-letter {
+  font-family: Lato-Black;
+  font-size: 30px;
 }
 
 .detail-course-anchor > a {
@@ -570,7 +588,7 @@ a:hover .hover-text-color {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  background-image: url(images/icon-point.png);
+  background-image: url(../images/icon-point.png);
   background-size: 100%;
 }
 .plan-cassettes-tool {
@@ -592,7 +610,7 @@ a:hover .hover-text-color {
   font-size: 16px;
 }
 .plan-cassettes-tools {
-  display: flex;
+  /*display: flex;*/
   margin-top: 28px;
   display: flow-root;
 }
@@ -648,24 +666,24 @@ a:hover .hover-text-color {
 .desc-title.detail:before {
   width: 17px;
   height: 17px;
-  background-image: url(images/icon-pencil.png);
+  background-image: url(../images/icon-pencil.png);
 }
 .desc-title.term:before {
   width: 16px;
   height: 18px;
   margin-left: 2px;
-  background-image: url(images/icon-calender.png);
+  background-image: url(../images/icon-calender.png);
 }
 .desc-title.condition:before {
   width: 17px;
   height: 14px;
   margin-left: 2px;
-  background-image: url(images/icon-condition.png);
+  background-image: url(../images/icon-condition.png);
 }
 .desc-title.fee:before {
   width: 20px;
   height: 20px;
-  background-image: url(images/icon-coin.png);
+  background-image: url(../images/icon-coin.png);
 }
 
 .desc-text {
